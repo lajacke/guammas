@@ -1,0 +1,7 @@
+#header{ height: 42px; padding-top: 36px; padding-bottom: 17px; border-top: 6px solid #616161}
+#header-title {height: 35px; padding-top: 5; padding-left: 2px; margin: auto; text-align: left;}
+#action-panel{ text-align: right; padding-top: 16px;}
+#main-search-box-input{display: none}
+#main-login, #main-search{cursor: pointer}
+#sys-container-daddy{height: auto !important;min-height: 550px;}
+#login_form, #forgot_form{text-align: left;}
