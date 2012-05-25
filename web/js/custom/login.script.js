@@ -11,11 +11,19 @@ var btnArray={
             statusCode: {
                 404: function() {
                     $(".ui-dialog-buttonset").remove();
-                    $(this).html(ajaxError);
+                    $("#main-login-form").html(ajaxError);
                 }
             },
-            success: function(){
-                
+            success: function(data){
+                $("#main-login-form").html(data);
+                $(".ui-dialog-buttonset").remove();
+                $("#main-login-form").dialog({
+                    buttons: {
+                        "Crea una cuenta nueva!": function() {
+                            $("#bien_login_form").submit();
+                        }
+                    }
+                })
             },
             error: function(){
                 $(".ui-dialog-buttonset").remove();
@@ -48,6 +56,9 @@ $(document).ready(function(){
             $(this).dialog({
                 buttons: btnArray
             })
+        },
+        close: function() {
+            $(this).html('')
         },
         buttons: btnArray
     });
